@@ -12673,23 +12673,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Will\\.nuget\\packages\\": {},
+    "C:\\Users\\DonMa\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Will\\Desktop\\Conversation Rest Service\\Conversation Rest Service\\Solutions\\VS Solutions\\Conversation Rest Service\\ConversationRestService.csproj",
+      "projectUniqueName": "C:\\Users\\DonMa\\Source\\Repos\\home-assistant-3rd-sem\\Conversation Rest Service\\Conversation Rest Service\\Solutions\\VS Solutions\\Conversation Rest Service\\ConversationRestService.csproj",
       "projectName": "ConversationRestService",
-      "projectPath": "C:\\Users\\Will\\Desktop\\Conversation Rest Service\\Conversation Rest Service\\Solutions\\VS Solutions\\Conversation Rest Service\\ConversationRestService.csproj",
-      "packagesPath": "C:\\Users\\Will\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Will\\Desktop\\Conversation Rest Service\\Conversation Rest Service\\Solutions\\VS Solutions\\Conversation Rest Service\\obj\\",
+      "projectPath": "C:\\Users\\DonMa\\Source\\Repos\\home-assistant-3rd-sem\\Conversation Rest Service\\Conversation Rest Service\\Solutions\\VS Solutions\\Conversation Rest Service\\ConversationRestService.csproj",
+      "packagesPath": "C:\\Users\\DonMa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DonMa\\Source\\Repos\\home-assistant-3rd-sem\\Conversation Rest Service\\Conversation Rest Service\\Solutions\\VS Solutions\\Conversation Rest Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Will\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DonMa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12729,6 +12729,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12747,10 +12748,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace ConversationRESTService
+namespace UDPListener
 {
-    public class Conversation
+    class Conversation
     {
 
         // Variables
         #region
         private string question;
-        private int id;
         private string timeOfConversation;
         #endregion
 
@@ -22,12 +20,8 @@ namespace ConversationRESTService
             get { return question; }
             set { question = value; }
         }
-        
-        public int ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
+
+       
         public string TimeOfConversation
         {
             get { return timeOfConversation; }
@@ -37,10 +31,9 @@ namespace ConversationRESTService
 
         // Constructors
         #region
-        public Conversation(int _id, string _question,  string _timeOfConversation)
+        public Conversation(string _question, string _timeOfConversation)
         {
-            ID = _id;
-            Question = _question;        
+            Question = _question;
             TimeOfConversation = _timeOfConversation;
         }
 
@@ -50,5 +43,13 @@ namespace ConversationRESTService
 
         }
         #endregion
+
+        public override string ToString()
+        {
+            return $"Date and time: {TimeOfConversation}, Question: {Question}";
+        }
+
     }
+
 }
+

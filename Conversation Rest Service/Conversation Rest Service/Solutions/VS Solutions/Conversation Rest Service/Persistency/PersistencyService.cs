@@ -11,12 +11,12 @@ namespace ConversationRESTService
     public static class PersistencyService
     {
         public const string GET_ALL = "Select * from Conversations";       
-        public const string CONNECTION_STRING = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public const string CONNECTION_STRING = @"Data Source=sensorrestservice20191117043106dbserver.database.windows.net;Initial Catalog=ConversationRestService20191209111353_db;User ID=bart0446;Password=Niwobiruf_34;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         // Get method that SQL can understand
         public static Conversation ReadNextElement(SqlDataReader reader)
         {
-            Conversation conversation = new Conversation(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+            Conversation conversation = new Conversation(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
             return conversation;
         }
 
@@ -85,11 +85,9 @@ namespace ConversationRESTService
                 {
                     using (SqlCommand cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = "Insert into Conversations Values (@Param1, @Param2, @Param3, @Param4)";
-                        cmd.Parameters.AddWithValue(parameterName: "@param1", conversationAdded.ID);
+                        cmd.CommandText = "Insert into Conversations Values (@Param2, @Param3)";
                         cmd.Parameters.AddWithValue(parameterName: "@param2", conversationAdded.Question);
-                        cmd.Parameters.AddWithValue(parameterName: "@param3", conversationAdded.Answer);
-                        cmd.Parameters.AddWithValue(parameterName: "@param4", conversationAdded.TimeOfConversation);
+                        cmd.Parameters.AddWithValue(parameterName: "@param3", conversationAdded.TimeOfConversation);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -108,14 +106,13 @@ namespace ConversationRESTService
                     using (SqlCommand cmd = conn.CreateCommand())
                     {
                         cmd.CommandText =
-                            "UPDATE Conversations SET ID = @param1, Question = @param2, Answer = @param3, TimeOfConversation = @param4 WHERE ID = @param5";
+                            "UPDATE Conversations SET ID = @param1, Question = @param2, TimeOfConversation = @param3 WHERE ID = @param4";
 
                         cmd.Parameters.AddWithValue(parameterName: "@param1", newConversationData.ID);
                         cmd.Parameters.AddWithValue(parameterName: "@param2", newConversationData.Question);
-                        cmd.Parameters.AddWithValue(parameterName: "@param3", newConversationData.Answer);
-                        cmd.Parameters.AddWithValue(parameterName: "@param4", newConversationData.TimeOfConversation);
+                        cmd.Parameters.AddWithValue(parameterName: "@param3", newConversationData.TimeOfConversation);
 
-                        cmd.Parameters.AddWithValue(parameterName: "@param5", conversationID);
+                        cmd.Parameters.AddWithValue(parameterName: "@param4", conversationID);
 
                         cmd.ExecuteNonQuery();
                     }
