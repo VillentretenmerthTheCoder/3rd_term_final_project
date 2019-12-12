@@ -13,10 +13,27 @@ h2
 h1{
     @extend h2;
 }
+
+.val{
+font-size:20px;
+
+}
+
+.chart{
+  font-size:25px;
+  background-color: #4CAF50;
+  height:35px;
+  text-align:center;
+  border-radius: 5px;
+  box-shadow: 1px 1px;
+  line-height: 27px;
+  
+}
+
 body{
 
-//background-color:rgb(191, 255, 192);
-background-image: url("/images/20191209_113431.jpg");
+background-color:rgb(191, 255, 192);
+
 }
 .topnav {
     background-color: #333;
