@@ -86,10 +86,14 @@ function searchPress():void{
     console.log("here2");
    }
    
-console.log("here");
-var button:HTMLButtonElement=<HTMLButtonElement>(document.getElementById("searchButton"));
-let input:HTMLInputElement=<HTMLInputElement>(document.getElementById("searchBar"));
+var button2:HTMLButtonElement=<HTMLButtonElement>(document.getElementById("searchButton"));
 
-button.addEventListener("click",searchPress);
+let div:HTMLDivElement=<HTMLDivElement>(document.getElementById("buttonDiv"));
+let input:HTMLInputElement=<HTMLInputElement>(document.getElementById("searchBar"));
+document.getElementById("searchButton").addEventListener("click",searchPress, false);
+button2.addEventListener("click",function(){console.log("blabla")}, false);
+div.addEventListener("click",searchPress);
+
+
 
 
