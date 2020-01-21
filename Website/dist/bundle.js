@@ -2103,7 +2103,7 @@ var i = 1;
 ///axios works just fine, we get the list of conversations and also create the map
 _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://conversationrestservice20191209113100.azurewebsites.net/api/conversations").then(function (response) {
     try {
-        document.getElementById("mainBody").innerHTML += '<ul class="questionList">';
+        document.getElementById("contentA").innerHTML += '<ul id="questionList">';
     }
     catch (_a) {
     }
@@ -2115,7 +2115,7 @@ _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://co
         map[element.question] += 1;
         i++;
         try {
-            document.getElementById("mainBody").innerHTML += "<li>" + element.question + "</li>";
+            document.getElementById("questionList").innerHTML += "<li>" + element.question + "</li>";
         }
         catch (_a) {
         }
@@ -2123,13 +2123,13 @@ _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://co
     for (var key in map) {
         try {
             if (map[key] >= 2)
-                document.getElementById("mainBodyB").innerHTML += '<div class="val">' + key + "  " + '</div><div class="chart" style="width:' + map[key] * 20 + 'px;">' + map[key] + '<br>';
+                document.getElementById("contentB").innerHTML += '<div class="val">' + key + "  " + '</div><div class="chart" style="width:' + map[key] * 20 + 'px;">' + map[key] + '<br>';
         }
         catch (_b) {
         }
     }
     try {
-        document.getElementById("mainBody").innerHTML += "</ul>";
+        document.getElementById("contentA").innerHTML += "</ul>";
     }
     catch (_c) {
     }

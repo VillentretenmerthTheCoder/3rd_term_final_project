@@ -35,7 +35,7 @@ let i=1
 ///axios works just fine, we get the list of conversations and also create the map
         axios.get<Conversation[]>("https://conversationrestservice20191209113100.azurewebsites.net/api/conversations").then((response:AxiosResponse)=>{
         try{
-        document.getElementById("mainBody").innerHTML+='<ul class="questionList">';
+        document.getElementById("contentA").innerHTML+='<ul id="questionList">';
         }
         catch{
 
@@ -52,7 +52,7 @@ let i=1
             i++
             
             try{
-            document.getElementById("mainBody").innerHTML+="<li>"+element.question+"</li>"
+            document.getElementById("questionList").innerHTML+="<li>"+element.question+"</li>"
             }
             catch{
 
@@ -63,7 +63,7 @@ let i=1
 for (let key in map){
     try{
     if (map[key]>=2)
-    document.getElementById("mainBodyB").innerHTML+='<div class="val">'+key+"  "+'</div><div class="chart" style="width:'+map[key]*20+'px;">'+map[key]+'<br>';
+    document.getElementById("contentB").innerHTML+='<div class="val">'+key+"  "+'</div><div class="chart" style="width:'+map[key]*20+'px;">'+map[key]+'<br>';
     }
     catch{
 
@@ -71,7 +71,7 @@ for (let key in map){
 }
 
 try{
-document.getElementById("mainBody").innerHTML+="</ul>";
+document.getElementById("contentA").innerHTML+="</ul>";
 }
 catch{
 
