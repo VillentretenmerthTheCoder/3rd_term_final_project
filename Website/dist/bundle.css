@@ -1,6 +1,11 @@
 #content {
   color: #0091aa;
-  margin-left: 25px; }
+  margin-left: 25px;
+  background-color: #bfffc0;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-right: 25px; }
 
 h2, h1 {
   color: #333; }
@@ -18,11 +23,12 @@ h2, h1 {
   line-height: 27px; }
 
 body {
-  background-color: #bfffc0; }
+  background-color: #7ccc7e; }
 
 .topnav {
-  margin-left: 25px;
+  margin-left: 20px;
   background-color: #333;
+  margin-right: 20px;
   overflow: hidden; }
 
 /* Style the links inside the navigation bar */
@@ -49,6 +55,7 @@ body {
 
 .Title {
   padding-top: 15px;
-  padding-left: 1000px;
+  padding-left: 1300px;
+  font-size: large;
   color: #f2f2f2;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
